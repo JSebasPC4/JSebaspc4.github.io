@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Portfolio</title>
+  <meta name="description" content="Portfolio d'ingénierie">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Karla:wght@400;500;700&family=IBM+Plex+Mono:wght@500&display=swap">
+  <link rel="stylesheet" href="estilos.css">
+  <!-- Aplica el tema guardado antes de pintar (evita parpadeo) -->
+  <script>try{var t=localStorage.getItem('pf-tema');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+</head>
+<body>
+  <div class="layout">
+
+    <!-- ============ Barra lateral ============ -->
+    <aside class="side">
+      <div class="side-in">
+        <img class="avatar" id="foto" src="" alt="">
+        <h1 class="name" id="nombre"></h1>
+        <p class="role" id="rol"></p>
+        <p class="place" id="ubicacion"></p>
+        <span class="status" id="disponibilidad"></span>
+        <div class="quick" id="enlaces"></div>
+        <nav class="toc" id="indice" aria-label="Sections"></nav>
+        <button class="theme" id="tema" type="button" aria-label="Changer le thème">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg>
+          <span id="temaTxt"></span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- ============ Contenido ============ -->
+    <main class="main">
+      <section class="intro" id="sobre-mi">
+        <p class="eyebrow" id="t-sobreMi"></p>
+        <h2 class="headline" id="titular"></h2>
+        <div class="prose" id="sobreMi"></div>
+        <div class="figures" id="cifras"></div>
+      </section>
+
+      <section id="proyectos">
+        <div class="sec-head"><p class="eyebrow" id="t-proyectos"></p><div class="filters" id="filtros" role="tablist"></div></div>
+        <div class="grid" id="lista-proyectos"></div>
+      </section>
+
+      <section id="recorrido">
+        <p class="eyebrow" id="t-experiencia"></p>
+        <ol class="timeline" id="experiencia"></ol>
+      </section>
+
+      <section id="competencias">
+        <p class="eyebrow" id="t-competencias"></p>
+        <div class="skills" id="lista-competencias"></div>
+      </section>
+
+      <section id="idiomas">
+        <p class="eyebrow" id="t-idiomas"></p>
+        <div class="langs" id="lista-idiomas"></div>
+      </section>
+
+      <section class="contact" id="contacto">
+        <p class="eyebrow" id="t-contacto"></p>
+        <h2 class="headline" id="contactoTitulo"></h2>
+        <p class="muted" id="contactoTexto"></p>
+        <div class="contact-row" id="contacto-datos"></div>
+      </section>
+
+      <footer class="foot"><span id="pie"></span></footer>
+    </main>
+  </div>
+
+  <script src="contenido.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

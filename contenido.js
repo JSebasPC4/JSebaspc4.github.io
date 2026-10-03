@@ -5,7 +5,7 @@
 window.PORTAFOLIO = {
 
   /* ---------- Identidad ---------- */
-  nombre: "Tu Nombre",                       // Reemplaza por tu nombre completo
+  nombre: "Juan Sebastian PERDOMO CAICEDO",                       // Reemplaza por tu nombre completo
   rol: "Élève-ingénieur · IMT Atlantique (TAF TEE)",
   ubicacion: "Nantes, France",
   foto: "assets/perfil.jpg",                // Guarda tu foto en la carpeta assets/
@@ -14,10 +14,10 @@ window.PORTAFOLIO = {
 
   /* ---------- Contacto ---------- */
   contacto: {
-    email: "tu.email@ejemplo.com",          // Reemplaza por tu correo
-    telefono: "+33 6 00 00 00 00",          // Reemplaza por tu teléfono
-    linkedin: "https://www.linkedin.com/in/tu-perfil",
-    github: "https://github.com/tu-usuario",
+    email: "juan.perdomo-caicedo@imt-atlantique.net",          // Reemplaza por tu correo
+    telefono: "+33 7 44 19 29 54",          // Reemplaza por tu teléfono
+    linkedin: "www.linkedin.com/in/juan-sebastian-perdomo-caicedo-064a952a8",
+    github: "https://github.com/JSebasPC4",
     cv: "assets/CV.pdf"                      // Guarda tu CV en PDF en assets/
   },
 

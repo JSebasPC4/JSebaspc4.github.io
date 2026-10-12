@@ -21,10 +21,84 @@
     return a;
   }
 
+  /* ---------- Imágenes: prueba otras extensiones si la indicada no existe ---------- */
+  var EXTS = ['jpg', 'jpeg', 'png', 'webp', 'JPG', 'JPEG', 'PNG'];
+  function cargarImagen(img, src) {
+    var m = String(src).match(/^(.*)\.(jpe?g|png|webp)$/i);
+    if (!m) { img.src = src; return; }
+    var alternativas = EXTS.map(function (e) { return m[1] + '.' + e; })
+                           .filter(function (u) { return u !== src; });
+    var i = 0;
+    img.addEventListener('error', function () {
+      if (i < alternativas.length) img.src = alternativas[i++];
+      else img.classList.add('roto');
+    });
+    img.src = src;
+  }
+
+  /* ---------- Estilos del carrusel (se inyectan desde aquí) ---------- */
+  var st = document.createElement('style');
+  st.textContent =
+    '.card .media{position:relative;aspect-ratio:16/10;background:rgba(127,127,127,.15);overflow:hidden}' +
+    '.card .media .slide{position:absolute;inset:0;display:none}' +
+    '.card .media .slide.on{display:block}' +
+    '.card .media img,.card .media video{width:100%;height:100%;object-fit:cover;display:block;background:#000}' +
+    '.card .media img.roto{visibility:hidden}' +
+    '.card .media .nav{position:absolute;top:50%;transform:translateY(-50%);width:34px;height:34px;border:0;border-radius:50%;background:rgba(0,0,0,.55);color:#fff;font-size:20px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2}' +
+    '.card .media .nav:hover{background:var(--accent,#1E40AF)}' +
+    '.card .media .prev{left:8px}.card .media .next{right:8px}' +
+    '.card .media .pts{position:absolute;left:0;right:0;bottom:8px;display:flex;gap:6px;justify-content:center;z-index:2;pointer-events:none}' +
+    '.card .media .pts i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.5)}' +
+    '.card .media .pts i.on{background:#fff}' +
+    '.card .media .count{position:absolute;top:8px;right:8px;background:rgba(0,0,0,.55);color:#fff;font-size:12px;padding:2px 8px;border-radius:99px;z-index:2}';
+  document.head.appendChild(st);
+
+  function crearCarrusel(lista, titulo) {
+    var media = el('div', 'media');
+    media.tabIndex = 0;
+    var slides = lista.map(function (src, n) {
+      var s = el('div', 'slide' + (n === 0 ? ' on' : ''));
+      if (/\.(mp4|webm|mov)$/i.test(src)) {
+        var v = el('video'); v.controls = true; v.loop = true; v.muted = true; v.playsInline = true;
+        v.setAttribute('preload', 'metadata'); v.setAttribute('aria-label', titulo);
+        v.src = src; s.appendChild(v);
+      } else {
+        var img = el('img'); img.alt = titulo + ' (' + (n + 1) + '/' + lista.length + ')';
+        if (n > 0) img.loading = 'lazy';
+        cargarImagen(img, src); s.appendChild(img);
+      }
+      media.appendChild(s); return s;
+    });
+    if (slides.length < 2) return media;
+
+    var pts = el('div', 'pts'); pts.setAttribute('aria-hidden', 'true');
+    var dots = slides.map(function (_, n) { var d = el('i', n === 0 ? 'on' : null); pts.appendChild(d); return d; });
+    var count = el('span', 'count', '1 / ' + slides.length);
+    var actual = 0;
+    function ir(n) {
+      var v = slides[actual].querySelector('video'); if (v) v.pause();
+      slides[actual].classList.remove('on'); dots[actual].classList.remove('on');
+      actual = (n + slides.length) % slides.length;
+      slides[actual].classList.add('on'); dots[actual].classList.add('on');
+      count.textContent = (actual + 1) + ' / ' + slides.length;
+    }
+    var prev = el('button', 'nav prev', '‹'); prev.type = 'button'; prev.setAttribute('aria-label', 'Précédent');
+    var next = el('button', 'nav next', '›'); next.type = 'button'; next.setAttribute('aria-label', 'Suivant');
+    prev.addEventListener('click', function () { ir(actual - 1); });
+    next.addEventListener('click', function () { ir(actual + 1); });
+    media.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') ir(actual - 1);
+      if (e.key === 'ArrowRight') ir(actual + 1);
+    });
+    media.appendChild(prev); media.appendChild(next); media.appendChild(pts); media.appendChild(count);
+    return media;
+  }
+
   /* ---------- Identidad ---------- */
   document.title = D.nombre + ' — Portfolio';
   if (D.colorAcento) document.documentElement.style.setProperty('--accent', D.colorAcento);
-  $('foto').src = D.foto || ''; $('foto').alt = D.nombre;
+  $('foto').alt = D.nombre;
+  if (D.foto) cargarImagen($('foto'), D.foto);
   $('nombre').textContent = D.nombre; $('rol').textContent = D.rol; $('ubicacion').textContent = D.ubicacion || '';
   $('disponibilidad').textContent = D.disponibilidad || '';
 
@@ -47,14 +121,8 @@
   var cards = [];
   (D.proyectos || []).forEach(function (p) {
     var card = el('article', 'card'); card.dataset.cat = p.categoria || '';
-    var media = el('div', 'media');
-    if (/\.(mp4|webm)$/i.test(p.media || '')) {
-      var v = el('video'); v.src = p.media; v.muted = true; v.loop = true; v.playsInline = true; v.setAttribute('preload', 'metadata'); v.setAttribute('aria-label', p.titulo);
-      media.appendChild(v);
-    } else if (p.media) {
-      var img = el('img'); img.src = p.media; img.alt = p.titulo; img.loading = 'lazy'; media.appendChild(img);
-    }
-    card.appendChild(media);
+    var lista = Array.isArray(p.media) ? p.media : (p.media ? [p.media] : []);
+    card.appendChild(crearCarrusel(lista, p.titulo));
     var body = el('div', 'body');
     if (p.categoria) body.appendChild(el('span', 'cat', p.categoria));
     body.appendChild(el('h3', null, p.titulo));
@@ -74,13 +142,6 @@
       });
       $('filtros').appendChild(b);
     });
-  }
-  // Los videos se reproducen solo cuando se ven (y nunca si el usuario pide menos animación)
-  var calm = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var vids = [].slice.call(document.querySelectorAll('.card video'));
-  if (!calm && vids.length && 'IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { var p = e.target.play(); if (p && p.catch) p.catch(function () {}); } else e.target.pause(); }); }, { threshold: .4 });
-    vids.forEach(function (v) { io.observe(v); });
   }
 
   /* ---------- Recorrido ---------- */

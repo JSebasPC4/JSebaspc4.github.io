@@ -16,7 +16,7 @@ window.PORTAFOLIO = {
   contacto: {
     email: "juan.perdomo-caicedo@imt-atlantique.net",          // Reemplaza por tu correo
     telefono: "+33 7 44 19 29 54",          // Reemplaza por tu teléfono
-    linkedin: "www.linkedin.com/in/juan-sebastian-perdomo-caicedo-064a952a8",
+    linkedin: "https://www.linkedin.com/in/juan-sebastian-perdomo-caicedo-064a952a8",
     github: "https://github.com/JSebasPC4",
     cv: "assets/CV.pdf"                      // Guarda tu CV en PDF en assets/
   },

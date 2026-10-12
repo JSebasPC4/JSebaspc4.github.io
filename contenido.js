@@ -89,6 +89,66 @@ window.PORTAFOLIO = {
     }
   ],
 
+    /* ---------- Parcours ---------- */
+  experiencia: [
+    {
+      fecha: "2026 – Présent",
+      titulo: "Diplôme d'Ingénieur Généraliste · Parcours TEE",
+      lugar: "IMT Atlantique · Nantes, France",
+      texto: "Spécialisation / Dominante : Transition Énergétique et Environnementale."
+    },
+    {
+      fecha: "2026",
+      titulo: "Ingénieur de projets",
+      lugar: "Proelect S.A.S · Bogotá, Colombie",
+      texto: "Gestion intégrale de projets d'infrastructure électrique industrielle, de l'ingénierie de détail à l'exécution et la supervision de chantier. Gestion des plannings de travaux, dans le respect des réglementations techniques et des normes de sécurité industrielle."
+    },
+    {
+      fecha: "2025",
+      titulo: "Certification en Science des Données Énergétiques",
+      lugar: "Coursera",
+      texto: ""
+    },
+    {
+      fecha: "2025 – Présent",
+      titulo: "Tuteur en physique / Coordinateur pédagogique",
+      lugar: "Groupe d'étude communautaire Owl · Bénévolat · Bogotá, Colombie",
+      texto: "Engagé dans le groupe depuis 2018 : tuteur en analyse d'images et dessin, puis en physique, avec des rôles de coordination et de codirection pédagogique."
+    },
+    {
+      fecha: "2024 – Présent",
+      titulo: "Professeur de physique, mathématiques, programmation et robotique",
+      lugar: "FORMARTE · Bogotá, Colombie",
+      texto: ""
+    },
+    {
+      fecha: "2024",
+      titulo: "Certification en ATP-Draw",
+      lugar: "Universidad Nacional de Colombia · Bogotá",
+      texto: ""
+    },
+    {
+      fecha: "2023 – Présent",
+      titulo: "Diplôme en Génie Électronique (96,5 % validé)",
+      lugar: "Universidad Nacional de Colombia · Bogotá",
+      texto: "Participation au groupe de recherche MNYSA (matériaux nanostructurés et leurs applications)."
+    },
+    {
+      fecha: "2022 – Présent",
+      titulo: "Groupe de recherche EMC-UN",
+      lugar: "Universidad Nacional de Colombia · Bogotá",
+      texto: "Groupe de recherche sur la compatibilité électromagnétique."
+    },
+    {
+      fecha: "2021 – 2025",
+      titulo: "Ingénieur en Génie Électrique",
+      lugar: "Universidad Nacional de Colombia · Bogotá",
+      texto: "Troisième meilleur diplômé sur 41."
+    }
+  ],
+
+
+
   /* ---------- Competencias ---------- */
   competencias: [
     { grupo: "Génie Électrique & Énergie", items: ["Réseaux Électriques", "Systèmes de Puissance", "Transition Énergétique", "Montage Électromécanique"] },

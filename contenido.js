@@ -42,15 +42,15 @@ window.PORTAFOLIO = {
       etiquetas: ["Réseaux Électriques", "Haute Tension", "Montage Électromécanique"],
       // Todas las fotos del Proyecto 1 agrupadas:
       media: [
-        "assets/proyecto1-foto1.jpg",
-        "assets/proyecto1-foto2.jpg",
-        "assets/proyecto1-foto3.jpg",
-        "assets/proyecto1-foto4.jpg",
-        "assets/proyecto1-foto5.jpg",
-        "assets/proyecto1-foto6.jpg",
-        "assets/proyecto1-foto7.jpg",
-        "assets/proyecto1-foto8.jpg",
-        "assets/proyecto1-foto9.jpg"
+        "assets/proyecto1-foto1.jpeg",
+        "assets/proyecto1-foto2.jpeg",
+        "assets/proyecto1-foto3.jpeg",
+        "assets/proyecto1-foto4.jpeg",
+        "assets/proyecto1-foto5.jpeg",
+        "assets/proyecto1-foto6.jpeg",
+        "assets/proyecto1-foto7.jpeg",
+        "assets/proyecto1-foto8.jpeg",
+        "assets/proyecto1-foto9.jpeg"
       ],
       enlace: ""
     },
@@ -61,7 +61,7 @@ window.PORTAFOLIO = {
       etiquetas: ["Électronique de Puissance", "Automatique", "Simulink"],
       // Fotos y videos del Proyecto 2 agrupados:
       media: [
-        "assets/proyecto2-foto1.jpg",
+        "assets/proyecto2-foto1.jpeg",
         "assets/proyecto2-foto2.jpg",
         "assets/proyecto2-foto3.jpg",
         "assets/proyecto2-foto4.jpg",

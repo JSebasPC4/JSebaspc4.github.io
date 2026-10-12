@@ -40,7 +40,18 @@ window.PORTAFOLIO = {
       categoria: "Énergie",
       descripcion: "Conception, exécution technique et inspection d'installations électriques industrielles et de réseaux de puissance.",
       etiquetas: ["Réseaux Électriques", "Haute Tension", "Montage Électromécanique"],
-      media: "assets/proyecto-1.jpg",
+      // Todas las fotos del Proyecto 1 agrupadas:
+      media: [
+        "assets/proyecto1-foto1.jpg",
+        "assets/proyecto1-foto2.jpg",
+        "assets/proyecto1-foto3.jpg",
+        "assets/proyecto1-foto4.jpg",
+        "assets/proyecto1-foto5.jpg",
+        "assets/proyecto1-foto6.jpg",
+        "assets/proyecto1-foto7.jpg",
+        "assets/proyecto1-foto8.jpg",
+        "assets/proyecto1-foto9.jpg"
+      ],
       enlace: ""
     },
     {
@@ -48,7 +59,16 @@ window.PORTAFOLIO = {
       categoria: "Automatique",
       descripcion: "Analyse, simulation et contrôle de systèmes électroniques appliqués à la conversion de puissance et aux systèmes énergétiques.",
       etiquetas: ["Électronique de Puissance", "Automatique", "Simulink"],
-      media: "assets/proyecto-2.jpg",
+      // Fotos y videos del Proyecto 2 agrupados:
+      media: [
+        "assets/proyecto2-foto1.jpg",
+        "assets/proyecto2-foto2.jpg",
+        "assets/proyecto2-foto3.jpg",
+        "assets/proyecto2-foto4.jpg",
+        "assets/proyecto2-foto5.jpg",
+        "assets/proyecto2-video1.mp4",
+        "assets/proyecto2-video2.mp4"
+      ],
       enlace: ""
     },
     {
@@ -56,36 +76,16 @@ window.PORTAFOLIO = {
       categoria: "Innovation",
       descripcion: "Application de l'intelligence artificielle et d'outils logiciels spécialisés pour l'optimisation des procédés et l'analyse de données techniques.",
       etiquetas: ["IA Appliquée", "Analyse de Données", "Modélisation"],
-      media: "assets/proyecto-3.jpg",
+      // Fotos y videos del Proyecto 3 agrupados:
+      media: [
+        "assets/proyecto3-foto1.jpg",
+        "assets/proyecto3-foto2.jpg",
+        "assets/proyecto3-foto3.jpg",
+        "assets/proyecto3-foto4.jpg",
+        //"assets/proyecto3-video1.mp4",
+        "assets/proyecto3-video2.mp4"
+      ],
       enlace: ""
-    }
-  ],
-
-  /* ---------- Experiencia / Recorrido ---------- */
-  experiencia: [
-    { 
-      fecha: "2026 – présent", 
-      titulo: "Élève-ingénieur · Diplôme d'Ingénieur (TAF TEE)", 
-      lugar: "IMT Atlantique, Nantes, France", 
-      texto: "Spécialisation en Transition Énergétique et Environnementale (TEE). Étude des systèmes énergétiques durables, décarbonation et ingénierie avancée." 
-    },
-    { 
-      fecha: "En cours (96 %)", 
-      titulo: "Génie Électronique (Double Diplôme)", 
-      lugar: "Université Nationale de Colombie", 
-      texto: "Formation approfondie en systèmes électroniques, traitement du signal, automatique et microélectronique." 
-    },
-    { 
-      fecha: "Diplômé", 
-      titulo: "Ingénieur Électricien", 
-      lugar: "Université Nationale de Colombie", 
-      texto: "Diplôme d'Ingénieur Électricien. Conception, dimensionnement et gestion de projets d'infrastructures électriques industrielles." 
-    },
-    { 
-      fecha: "Expérience Pro", 
-      titulo: "Chef de Projets & Enseignant de Physique", 
-      lugar: "Secteur Industriel & Éducatif", 
-      texto: "Gestion technique de projets de montage électromécanique. Enseignement des principes fondamentaux de la physique et de l'électromagnétisme." 
     }
   ],
 

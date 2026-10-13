@@ -29,7 +29,7 @@ window.PORTAFOLIO = {
   ],
   cifras: [
     { valor: "Ingénieur Électricien",  texto: "UNAL" },
-    { valor: "Ingénieur Généraliste",  texto: "IMT Atlantique · TAF TEE" },
+    { valor: "Ingénieur Généraliste",  texto: "IMT Atlantique · TAF TEE (transition énergétique et environnementale)" },
     { valor: "Ingénieur Électronique", texto: "96 % validé · UNAL" }
   ],
 

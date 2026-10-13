@@ -1,36 +1,36 @@
 /* =====================================================================
-   CONTENIDO DEL PORTAFOLIO — el único archivo que necesitas editar
+   CONTENIDO DEL PORTAFOLIO — Juan Sebastian PERDOMO CAICEDO
    ===================================================================== */
 
 window.PORTAFOLIO = {
 
   /* ---------- Identidad ---------- */
-  nombre: "Juan Sebastian PERDOMO CAICEDO",                       // Reemplaza por tu nombre completo
+  nombre: "Juan Sebastian PERDOMO CAICEDO",
   rol: "Élève-ingénieur · IMT Atlantique (TAF TEE)",
   ubicacion: "Nantes, France",
-  foto: "assets/perfil.jpg",                // Guarda tu foto en la carpeta assets/
-  disponibilidad: "Recherche un stage de fin d'études / ingénieur (2027)", 
-  colorAcento: "#1E40AF",                   // Azul técnico/corporativo
+  foto: "assets/perfil.jpg",
+  disponibilidad: "Recherche un stage d'ingénieur (4 mois - 2027)", 
+  colorAcento: "#1E40AF",
 
   /* ---------- Contacto ---------- */
   contacto: {
-    email: "juan.perdomo-caicedo@imt-atlantique.net",          // Reemplaza por tu correo
-    telefono: "+33 7 44 19 29 54",          // Reemplaza por tu teléfono
+    email: "juan.perdomo-caicedo@imt-atlantique.net",
+    telefono: "+33 7 44 19 29 54",
     linkedin: "https://www.linkedin.com/in/juan-sebastian-perdomo-caicedo-064a952a8",
     github: "https://github.com/JSebasPC4",
-    cv: "assets/CV.pdf"                      // Guarda tu CV en PDF en assets/
+    cv: "assets/CV.pdf"
   },
 
   /* ---------- Presentación ---------- */
   titular: "Ingénieur Électricien & Élève-ingénieur IMT Atlantique spécialisé en Transition Énergétique.",
   sobreMi: [
     "Ingénieur Électricien diplômé et élève-ingénieur en double diplôme à l'IMT Atlantique (Thématique d'Approfondissement : Transition Énergétique et Environnementale - TAF TEE). Mon parcours combine une solide formation scientifique et technique avec une vision globale des enjeux énergétiques.",
-    "Actuellement en cours de finalisation de mon second diplôme en Génie Électronique (96 % validé), je recherche un stage d'ingénieur/fin d'études dans les secteurs de la transition énergétique, des systèmes électriques et des technologies bas-carbone."
+    "Actuellement en cours de finalisation de mon second diplôme en Génie Électronique (96 % validé), je recherche un stage d'ingénieur de 4 mois (BAC+4) dans les secteurs de la transition énergétique, des systèmes électriques et des technologies bas-carbone."
   ],
   cifras: [
-    { valor: "Double Diplôme", texto: "UNAL - IMT Atlantique" },
-    { valor: "96 %",            texto: "Génie Électronique validé" },
-    { valor: "TAF TEE",         texto: "Transition Énergétique" }
+    { valor: "Ingénieur Électricien", texto: "Diplômé · UNAL" },
+    { valor: "Ingénieur Généraliste", texto: "IMT Atlantique · TAF TEE" },
+    { valor: "Génie Électronique",    texto: "96 % validé · UNAL" }
   ],
 
   /* ---------- Proyectos ---------- */
@@ -40,7 +40,6 @@ window.PORTAFOLIO = {
       categoria: "Énergie",
       descripcion: "Conception, exécution technique et inspection d'installations électriques industrielles et de réseaux de puissance.",
       etiquetas: ["Réseaux Électriques", "Haute Tension", "Montage Électromécanique"],
-      // Todas las fotos del Proyecto 1 agrupadas:
       media: [
         "assets/proyecto1-foto1.jpeg",
         "assets/proyecto1-foto2.jpeg",
@@ -59,7 +58,6 @@ window.PORTAFOLIO = {
       categoria: "Automatique",
       descripcion: "Analyse, simulation et contrôle de systèmes électroniques appliqués à la conversion de puissance et aux systèmes énergétiques.",
       etiquetas: ["Électronique de Puissance", "Automatique", "Simulink"],
-      // Fotos y videos del Proyecto 2 agrupados:
       media: [
         "assets/proyecto2-foto1.jpeg",
         "assets/proyecto2-foto2.jpg",
@@ -76,20 +74,18 @@ window.PORTAFOLIO = {
       categoria: "Innovation",
       descripcion: "Application de l'intelligence artificielle et d'outils logiciels spécialisés pour l'optimisation des procédés et l'analyse de données techniques.",
       etiquetas: ["IA Appliquée", "Analyse de Données", "Modélisation"],
-      // Fotos y videos del Proyecto 3 agrupados:
       media: [
         "assets/proyecto3-foto1.jpg",
         "assets/proyecto3-foto2.jpg",
         "assets/proyecto3-foto3.jpg",
         "assets/proyecto3-foto4.jpg",
-        //"assets/proyecto3-video1.mp4",
         "assets/proyecto3-video2.mp4"
       ],
       enlace: ""
     }
   ],
 
-    /* ---------- Parcours ---------- */
+  /* ---------- Parcours ---------- */
   experiencia: [
     {
       fecha: "2026 – Présent",
@@ -110,13 +106,7 @@ window.PORTAFOLIO = {
       texto: ""
     },
     {
-      fecha: "2025 – Présent",
-      titulo: "Tuteur en physique / Coordinateur pédagogique",
-      lugar: "Groupe d'étude communautaire Owl · Bénévolat · Bogotá, Colombie",
-      texto: "Engagé dans le groupe depuis 2018 : tuteur en analyse d'images et dessin, puis en physique, avec des rôles de coordination et de codirection pédagogique."
-    },
-    {
-      fecha: "2024 – Présent",
+      fecha: "2024 – 2025",
       titulo: "Professeur de physique, mathématiques, programmation et robotique",
       lugar: "FORMARTE · Bogotá, Colombie",
       texto: ""
@@ -131,11 +121,17 @@ window.PORTAFOLIO = {
       fecha: "2023 – Présent",
       titulo: "Diplôme en Génie Électronique (96,5 % validé)",
       lugar: "Universidad Nacional de Colombia · Bogotá",
-      texto: "Participation au groupe de recherche MNYSA (matériaux nanostructurés et leurs applications)."
+      texto: "En cours de finalisation."
     },
     {
-      fecha: "2022 – Présent",
-      titulo: "Groupe de recherche EMC-UN",
+      fecha: "2023 – 2025",
+      titulo: "Participation au groupe de recherche MNYSA",
+      lugar: "Universidad Nacional de Colombia · Bogotá",
+      texto: "Groupe Matériaux nanostructurés et leurs applications."
+    },
+    {
+      fecha: "2022 – 2025",
+      titulo: "Participation au groupe de recherche EMC-UN",
       lugar: "Universidad Nacional de Colombia · Bogotá",
       texto: "Groupe de recherche sur la compatibilité électromagnétique."
     },
@@ -144,10 +140,14 @@ window.PORTAFOLIO = {
       titulo: "Ingénieur en Génie Électrique",
       lugar: "Universidad Nacional de Colombia · Bogotá",
       texto: "Troisième meilleur diplômé sur 41."
+    },
+    {
+      fecha: "2018 – 2025",
+      titulo: "Tuteur en physique / Coordinateur pédagogique",
+      lugar: "Groupe d'étude communautaire Owl · Bénévolat · Bogotá, Colombie",
+      texto: "Engagé dans le groupe depuis 2018 : tuteur en analyse d'images et dessin, puis en physique, avec des rôles de coordination et de codirection pédagogique."
     }
   ],
-
-
 
   /* ---------- Competencias ---------- */
   competencias: [
@@ -163,7 +163,7 @@ window.PORTAFOLIO = {
     { idioma: "Anglais",  nivel: "Technique / Professionnel", puntos: 4 }
   ],
 
-  /* ---------- Textos de la interfaz (en Francés para reclutadores en Francia) ---------- */
+  /* ---------- Textos de la interfaz ---------- */
   textos: {
     sobreMi: "À propos", 
     proyectos: "Projets", 
@@ -177,7 +177,7 @@ window.PORTAFOLIO = {
     copiar: "Copier e-mail", 
     copiado: "Copié !",
     contactoTitulo: "Travaillons ensemble", 
-    contactoTexto: "Disponible pour un stage d'ingénieur / fin d'études dans les secteurs de l'énergie et des technologies avancées.",
+    contactoTexto: "Disponible pour un stage d'ingénieur (4 mois) dans les secteurs de l'énergie et des technologies avancées.",
     tema: "Thème"
   }
 };
